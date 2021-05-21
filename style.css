@@ -1,0 +1,37 @@
+@import "https://cdn.jsdelivr.net/npm/bulma@0.9.2/css/bulma.min.css";
+@import url(//db.onlinewebfonts.com/c/961a181da27e7cbc072ec2fb5bbfe2a9?family=Circular+Std+Bold);
+@import url(//db.onlinewebfonts.com/c/f1a22f6f15d272c7aa56da8b2c91f5e5?family=Circular+Std+Black);
+@import url(//db.onlinewebfonts.com/c/860c3ec7bbc5da3e97233ccecafe512e?family=Circular+Std+Book);
+.navbar-brand {
+    font-family: 'Circular Std Bold';
+    color: black;
+    font-size: 200%;
+}
+
+.navbar-menu {
+    font-family: 'Circular Std Book';
+    color: black;
+}
+
+.hero {
+    background-color: #F5F5F5;
+    border-radius: 0% 50% 50% 0%;
+    width: 75%;
+    padding: 0% 10%;
+    font-family: 'Circular Std Black';
+}
+
+.hero-subtitle {
+    text-transform: uppercase;
+    color: #6F6F6F;
+}
+
+.hero-title {
+    font-size: 5vw;
+    font-family: 'Circular Std Bold';
+    color: black;
+}
+
+.section {
+    padding: 0;
+}
