@@ -4,8 +4,9 @@
 <head>
     <meta charset="utf-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1" />
-    <title>Galaxy Wealth</title>
-    <link rel="stylesheet" href="style.css" />
+    <title>Art Arena</title>
+    <link rel="stylesheet" href="./assets/styles/style.css" />
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/2.1.1/jquery.min.js"></script>
 </head>
 
 <body>
@@ -13,35 +14,118 @@
         <div class="container">
             <div class="navbar-brand">
                 <a class="navbar-item">
-                    <h1>galaxywealth.</h1>
+                    <h1>Art Arena</h1>
                 </a>
             </div>
             <div id="navbarMenuHeroB" class="navbar-menu">
                 <div class="navbar-end">
                     <a class="navbar-item is-active"> home </a>
-                    <a class="navbar-item"> about </a>
-                    <a class="navbar-item"> memberships </a>
+                    <a class="navbar-item modal-button" data-target="#about">
+                            about
+                        </a>
+                </div>
+                <div id="about" class="modal">
+                    <div class="modal-background"></div>
+                    <div class="modal-card">
+                        <header class="modal-card-head">
+                            <p class="modal-card-title">About</p>
+                        </header>
+                        <section class="modal-card-body">
+                            <h1>
+                                This website is done solely for the purpose of exploring HTML using Bulma.
+                            </h1>
+                        </section>
+
+                        <button class="modal-close is-large" aria-label="close"></button>
+                    </div>
                 </div>
             </div>
         </div>
     </nav>
+
     <section class="section is-medium px-0">
         <div class="hero">
             <div class="hero-body">
                 <p class="hero-subtitle">Here we are</p>
                 <h1 class="hero-title">
-                    Building India's smartest traders.
+                    Best Artwork in the City is HERE.
                 </h1>
                 <p class="hero-body">
-                    Our team of financial trainers is here to help you with stocks,
-                    <br /> derivatives, commodities, forex, and international markets.
+                    Post your work here, Let the world see your talent.
                 </p>
             </div>
         </div>
-        <button class="button is-primary is-rounded">
-                Request Callback
-            </button>
     </section>
+    <section class="section">
+        <div class="tile is-ancestor">
+            <div class="tile is-vertical is-12">
+                <div class="tile">
+                    <div class="tile is-parent is-vertical is-8">
+                        <article class="tile is-child notification">
+                            <figure class="image">
+                                <img src="/assets/pics/0.jpeg" />
+                            </figure>
+                        </article>
+                    </div>
+                    <div class="tile is-parent">
+                        <div class="tile is-parent is-vertical">
+                            <article class="tile is-child notification">
+                                <figure class="image">
+                                    <img src="/assets/pics/1.jpeg" />
+                                </figure>
+                            </article>
+                            <article class="tile is-child notification">
+                                <figure class="image">
+                                    <img src="/assets/pics/2.jpeg" />
+                                </figure>
+                            </article>
+                        </div>
+                        <div class="tile is-parent is-vertical">
+                            <article class="tile is-child notification">
+                                <figure class="image">
+                                    <img src="/assets/pics/3.jpeg" />
+                                </figure>
+                            </article>
+                            <article class="tile is-child notification">
+                                <figure class="image">
+                                    <img src="/assets/pics/4.jpeg" />
+                                </figure>
+                            </article>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+    <footer class="footer">
+        <div class="content has-text-centered">
+            <p>
+                Made by
+                <a href="https://github.com/rahulsunil2" class="href">Rahul</a
+                    >
+                    with
+                    <a
+                        href="https://www.instagram.com/elizabeth_aanya/"
+                        class="href"
+                        >Elizabeth's</a
+                    >
+                    Artwork using
+                    <a href="https://bulma.io/" class="href">Bulma</a>
+            </p>
+        </div>
+    </footer>
+    <script>
+        $(".modal-button").click(function() {
+            var target = $(this).data("target");
+            $("html").addClass("is-clipped");
+            $(target).addClass("is-active");
+        });
+
+        $(".modal-close").click(function() {
+            $("html").removeClass("is-clipped");
+            $(this).parent().removeClass("is-active");
+        });
+    </script>
 </body>
 
 </html>
