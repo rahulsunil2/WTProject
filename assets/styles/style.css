@@ -1,66 +1,7 @@
 @import "https://cdn.jsdelivr.net/npm/bulma@0.9.2/css/bulma.min.css";
-@font-face {
-    font-family: 'Circular Std';
-    src: url('CircularStd-MediumItalic.eot');
-    src: local('Circular Std Medium Italic'), local('CircularStd-MediumItalic'), url('CircularStd-MediumItalic.eot?#iefix') format('embedded-opentype'), url('CircularStd-MediumItalic.woff2') format('woff2'), url('CircularStd-MediumItalic.woff') format('woff'), url('CircularStd-MediumItalic.ttf') format('truetype');
-    font-weight: 500;
-    font-style: italic;
-}
-
-@font-face {
-    font-family: 'Circular Std';
-    src: url('CircularStd-Black.eot');
-    src: local('Circular Std Black'), local('CircularStd-Black'), url('CircularStd-Black.eot?#iefix') format('embedded-opentype'), url('CircularStd-Black.woff2') format('woff2'), url('CircularStd-Black.woff') format('woff'), url('CircularStd-Black.ttf') format('truetype');
-    font-weight: 900;
-    font-style: normal;
-}
-
-@font-face {
-    font-family: 'Circular Std';
-    src: url('CircularStd-Medium.eot');
-    src: local('Circular Std Medium'), local('CircularStd-Medium'), url('CircularStd-Medium.eot?#iefix') format('embedded-opentype'), url('CircularStd-Medium.woff2') format('woff2'), url('CircularStd-Medium.woff') format('woff'), url('CircularStd-Medium.ttf') format('truetype');
-    font-weight: 500;
-    font-style: normal;
-}
-
-@font-face {
-    font-family: 'Circular Std';
-    src: url('CircularStd-Bold.eot');
-    src: local('Circular Std Bold'), local('CircularStd-Bold'), url('CircularStd-Bold.eot?#iefix') format('embedded-opentype'), url('CircularStd-Bold.woff2') format('woff2'), url('CircularStd-Bold.woff') format('woff'), url('CircularStd-Bold.ttf') format('truetype');
-    font-weight: bold;
-    font-style: normal;
-}
-
-@font-face {
-    font-family: 'Circular Std';
-    src: url('CircularStd-BlackItalic.eot');
-    src: local('Circular Std Black Italic'), local('CircularStd-BlackItalic'), url('CircularStd-BlackItalic.eot?#iefix') format('embedded-opentype'), url('CircularStd-BlackItalic.woff2') format('woff2'), url('CircularStd-BlackItalic.woff') format('woff'), url('CircularStd-BlackItalic.ttf') format('truetype');
-    font-weight: 900;
-    font-style: italic;
-}
-
-@font-face {
-    font-family: 'Circular Std Book';
-    src: url('CircularStd-BookItalic.eot');
-    src: local('Circular Std Book Italic'), local('CircularStd-BookItalic'), url('CircularStd-BookItalic.eot?#iefix') format('embedded-opentype'), url('CircularStd-BookItalic.woff2') format('woff2'), url('CircularStd-BookItalic.woff') format('woff'), url('CircularStd-BookItalic.ttf') format('truetype');
-    font-weight: normal;
-    font-style: italic;
-}
-
-@font-face {
-    font-family: 'Circular Std';
-    src: url('CircularStd-BoldItalic.eot');
-    src: local('Circular Std Bold Italic'), local('CircularStd-BoldItalic'), url('CircularStd-BoldItalic.eot?#iefix') format('embedded-opentype'), url('CircularStd-BoldItalic.woff2') format('woff2'), url('CircularStd-BoldItalic.woff') format('woff'), url('CircularStd-BoldItalic.ttf') format('truetype');
-    font-weight: bold;
-    font-style: italic;
-}
-
-@font-face {
-    font-family: 'Circular Std Book';
-    src: url('CircularStd-Book.eot');
-    src: local('Circular Std Book'), local('CircularStd-Book'), url('CircularStd-Book.eot?#iefix') format('embedded-opentype'), url('CircularStd-Book.woff2') format('woff2'), url('CircularStd-Book.woff') format('woff'), url('CircularStd-Book.ttf') format('truetype');
-    font-weight: normal;
-    font-style: normal;
+@import "fonts.css";
+html {
+    scroll-behavior: smooth;
 }
 
 .navbar-brand {
@@ -99,76 +40,18 @@
     color: black;
 }
 
-.section {
+.landing-section {
     padding: 0;
 }
 
-.glow-on-hover {
-    width: 220px;
-    height: 50px;
-    border: none;
-    outline: none;
-    color: #fff;
-    background: #111;
-    cursor: pointer;
-    position: relative;
-    z-index: 0;
-    border-radius: 10px;
+.notification {
+    padding: 0;
 }
 
-.glow-on-hover:before {
-    content: '';
-    background: linear-gradient(45deg, #ff0000, #ff7300, #fffb00, #48ff00, #00ffd5, #002bff, #7a00ff, #ff00c8, #ff0000);
-    position: absolute;
-    top: -2px;
-    left: -2px;
-    background-size: 400%;
-    z-index: -1;
-    filter: blur(5px);
-    width: calc(100% + 4px);
-    height: calc(100% + 4px);
-    animation: glowing 20s linear infinite;
-    opacity: 0;
-    transition: opacity .3s ease-in-out;
-    border-radius: 10px;
+.tab-container {
+    display: none;
 }
 
-.glow-on-hover:active {
-    color: #fff
-}
-
-.glow-on-hover:active:after {
-    background: transparent;
-}
-
-.glow-on-hover:hover:before {
-    opacity: 1;
-}
-
-.glow-on-hover:after {
-    z-index: -1;
-    content: '';
-    position: absolute;
-    width: 100%;
-    height: 100%;
-    background: #111;
-    left: 0;
-    top: 0;
-    border-radius: 10px;
-}
-
-@keyframes glowing {
-    0% {
-        background-position: 0 0;
-    }
-    50% {
-        background-position: 400% 0;
-    }
-    100% {
-        background-position: 0 0;
-    }
-}
-
-html {
-    scroll-behavior: smooth;
+.tab-container.is-active {
+    display: flex;
 }

@@ -35,15 +35,14 @@
                                 This website is done solely for the purpose of exploring HTML using Bulma.
                             </h1>
                         </section>
-
-                        <button class="modal-close is-large" aria-label="close"></button>
                     </div>
+                    <button class="modal-close is-large" aria-label="close"></button>
                 </div>
             </div>
         </div>
     </nav>
 
-    <section class="section is-medium px-0">
+    <section class="section is-medium px-0 landing-section">
         <div class="hero">
             <div class="hero-body">
                 <p class="hero-subtitle">Here we are</p>
@@ -54,7 +53,7 @@
                     Post your work here, Let the world see your talent.
                 </p>
                 <a href="#gallery">
-                    <button class="button glow-on-hover" type="button">
+                    <button class="button is-large is-link is-rounded">
                             Explore
                         </button>
                 </a>
@@ -62,40 +61,99 @@
         </div>
     </section>
     <section id="gallery" class="section">
-        <div class="tile is-ancestor">
-            <div class="tile is-vertical is-12">
-                <div class="tile">
-                    <div class="tile is-parent is-vertical is-8">
-                        <article class="tile is-child notification">
-                            <figure class="image">
-                                <img src="./assets/pics/0.jpeg" />
-                            </figure>
-                        </article>
-                    </div>
-                    <div class="tile is-parent">
-                        <div class="tile is-parent is-vertical">
-                            <article class="tile is-child notification">
-                                <figure class="image">
-                                    <img src="./assets/pics/1.jpeg" />
-                                </figure>
-                            </article>
-                            <article class="tile is-child notification">
-                                <figure class="image">
-                                    <img src="./assets/pics/2.jpeg" />
-                                </figure>
-                            </article>
+        <div id="tabs" class="tabs is-toggle is-centered is-toggle-rounded">
+            <ul>
+                <li class="is-active" data-tab="1">
+                    <a>
+                        <span>Elizabeth's Artwork</span>
+                    </a>
+                </li>
+                <li data-tab="2">
+                    <a>
+                        <span>Devika's Artwork</span>
+                    </a>
+                </li>
+            </ul>
+        </div>
+        <div id="tab-content">
+            <div class="tab-container is-active" data-content="1">
+                <div class="tile is-ancestor">
+                    <div class="tile is-vertical is-12">
+                        <div class="tile">
+                            <div class="tile is-parent is-vertical is-8">
+                                <article class="tile is-child notification">
+                                    <figure class="image">
+                                        <img src="./assets/pics/eli/0.jpeg" />
+                                    </figure>
+                                </article>
+                            </div>
+                            <div class="tile is-parent">
+                                <div class="tile is-parent is-vertical">
+                                    <article class="tile is-child notification">
+                                        <figure class="image">
+                                            <img src="./assets/pics/eli/1.jpeg" />
+                                        </figure>
+                                    </article>
+                                    <article class="tile is-child notification">
+                                        <figure class="image">
+                                            <img src="./assets/pics/eli/2.jpeg" />
+                                        </figure>
+                                    </article>
+                                </div>
+                                <div class="tile is-parent is-vertical">
+                                    <article class="tile is-child notification">
+                                        <figure class="image">
+                                            <img src="./assets/pics/eli/3.jpeg" />
+                                        </figure>
+                                    </article>
+                                    <article class="tile is-child notification">
+                                        <figure class="image">
+                                            <img src="./assets/pics/eli/4.jpeg" />
+                                        </figure>
+                                    </article>
+                                </div>
+                            </div>
                         </div>
-                        <div class="tile is-parent is-vertical">
-                            <article class="tile is-child notification">
-                                <figure class="image">
-                                    <img src="./assets/pics/3.jpeg" />
-                                </figure>
-                            </article>
-                            <article class="tile is-child notification">
-                                <figure class="image">
-                                    <img src="./assets/pics/4.jpeg" />
-                                </figure>
-                            </article>
+                    </div>
+                </div>
+            </div>
+            <div class="tab-container" data-content="2">
+                <div class="tile is-ancestor">
+                    <div class="tile is-vertical is-12">
+                        <div class="tile">
+                            <div class="tile is-parent is-vertical is-8">
+                                <article class="tile is-child notification">
+                                    <figure class="image">
+                                        <img src="./assets/pics/chaa/6.jpeg" />
+                                    </figure>
+                                </article>
+                            </div>
+                            <div class="tile is-parent">
+                                <div class="tile is-parent is-vertical">
+                                    <article class="tile is-child notification">
+                                        <figure class="image">
+                                            <img src="./assets/pics/chaa/1.jpeg" />
+                                        </figure>
+                                    </article>
+                                    <article class="tile is-child notification">
+                                        <figure class="image">
+                                            <img src="./assets/pics/chaa/4.jpeg" />
+                                        </figure>
+                                    </article>
+                                </div>
+                                <div class="tile is-parent is-vertical">
+                                    <article class="tile is-child notification">
+                                        <figure class="image">
+                                            <img src="./assets/pics/chaa/3.jpeg" />
+                                        </figure>
+                                    </article>
+                                    <article class="tile is-child notification">
+                                        <figure class="image">
+                                            <img src="./assets/pics/chaa/5.jpeg" />
+                                        </figure>
+                                    </article>
+                                </div>
+                            </div>
                         </div>
                     </div>
                 </div>
@@ -128,7 +186,23 @@
 
         $(".modal-close").click(function() {
             $("html").removeClass("is-clipped");
-            $("#about").removeClass("is-active");
+            $(this).parent().removeClass("is-active");
+            console.log($(this).parent());
+            console.log($("#about"));
+        });
+
+        $(document).ready(function() {
+            $("#tabs li").on("click", function() {
+                var tab = $(this).data("tab");
+
+                $("#tabs li").removeClass("is-active");
+                $(this).addClass("is-active");
+
+                $(".tab-container").removeClass("is-active");
+                $('.tab-container[data-content="' + tab + '"]').addClass(
+                    "is-active"
+                );
+            });
         });
     </script>
 </body>
