@@ -1,9 +1,72 @@
 @import "https://cdn.jsdelivr.net/npm/bulma@0.9.2/css/bulma.min.css";
-@import url(//db.onlinewebfonts.com/c/961a181da27e7cbc072ec2fb5bbfe2a9?family=Circular+Std+Bold);
-@import url(//db.onlinewebfonts.com/c/f1a22f6f15d272c7aa56da8b2c91f5e5?family=Circular+Std+Black);
-@import url(//db.onlinewebfonts.com/c/860c3ec7bbc5da3e97233ccecafe512e?family=Circular+Std+Book);
+@font-face {
+    font-family: 'Circular Std';
+    src: url('CircularStd-MediumItalic.eot');
+    src: local('Circular Std Medium Italic'), local('CircularStd-MediumItalic'), url('CircularStd-MediumItalic.eot?#iefix') format('embedded-opentype'), url('CircularStd-MediumItalic.woff2') format('woff2'), url('CircularStd-MediumItalic.woff') format('woff'), url('CircularStd-MediumItalic.ttf') format('truetype');
+    font-weight: 500;
+    font-style: italic;
+}
+
+@font-face {
+    font-family: 'Circular Std';
+    src: url('CircularStd-Black.eot');
+    src: local('Circular Std Black'), local('CircularStd-Black'), url('CircularStd-Black.eot?#iefix') format('embedded-opentype'), url('CircularStd-Black.woff2') format('woff2'), url('CircularStd-Black.woff') format('woff'), url('CircularStd-Black.ttf') format('truetype');
+    font-weight: 900;
+    font-style: normal;
+}
+
+@font-face {
+    font-family: 'Circular Std';
+    src: url('CircularStd-Medium.eot');
+    src: local('Circular Std Medium'), local('CircularStd-Medium'), url('CircularStd-Medium.eot?#iefix') format('embedded-opentype'), url('CircularStd-Medium.woff2') format('woff2'), url('CircularStd-Medium.woff') format('woff'), url('CircularStd-Medium.ttf') format('truetype');
+    font-weight: 500;
+    font-style: normal;
+}
+
+@font-face {
+    font-family: 'Circular Std';
+    src: url('CircularStd-Bold.eot');
+    src: local('Circular Std Bold'), local('CircularStd-Bold'), url('CircularStd-Bold.eot?#iefix') format('embedded-opentype'), url('CircularStd-Bold.woff2') format('woff2'), url('CircularStd-Bold.woff') format('woff'), url('CircularStd-Bold.ttf') format('truetype');
+    font-weight: bold;
+    font-style: normal;
+}
+
+@font-face {
+    font-family: 'Circular Std';
+    src: url('CircularStd-BlackItalic.eot');
+    src: local('Circular Std Black Italic'), local('CircularStd-BlackItalic'), url('CircularStd-BlackItalic.eot?#iefix') format('embedded-opentype'), url('CircularStd-BlackItalic.woff2') format('woff2'), url('CircularStd-BlackItalic.woff') format('woff'), url('CircularStd-BlackItalic.ttf') format('truetype');
+    font-weight: 900;
+    font-style: italic;
+}
+
+@font-face {
+    font-family: 'Circular Std Book';
+    src: url('CircularStd-BookItalic.eot');
+    src: local('Circular Std Book Italic'), local('CircularStd-BookItalic'), url('CircularStd-BookItalic.eot?#iefix') format('embedded-opentype'), url('CircularStd-BookItalic.woff2') format('woff2'), url('CircularStd-BookItalic.woff') format('woff'), url('CircularStd-BookItalic.ttf') format('truetype');
+    font-weight: normal;
+    font-style: italic;
+}
+
+@font-face {
+    font-family: 'Circular Std';
+    src: url('CircularStd-BoldItalic.eot');
+    src: local('Circular Std Bold Italic'), local('CircularStd-BoldItalic'), url('CircularStd-BoldItalic.eot?#iefix') format('embedded-opentype'), url('CircularStd-BoldItalic.woff2') format('woff2'), url('CircularStd-BoldItalic.woff') format('woff'), url('CircularStd-BoldItalic.ttf') format('truetype');
+    font-weight: bold;
+    font-style: italic;
+}
+
+@font-face {
+    font-family: 'Circular Std Book';
+    src: url('CircularStd-Book.eot');
+    src: local('Circular Std Book'), local('CircularStd-Book'), url('CircularStd-Book.eot?#iefix') format('embedded-opentype'), url('CircularStd-Book.woff2') format('woff2'), url('CircularStd-Book.woff') format('woff'), url('CircularStd-Book.ttf') format('truetype');
+    font-weight: normal;
+    font-style: normal;
+}
+
 .navbar-brand {
-    font-family: 'Circular Std Bold';
+    font-family: 'Circular Std';
+    font-weight: bold;
+    font-style: normal;
     color: black;
     font-size: 200%;
 }
@@ -18,7 +81,9 @@
     border-radius: 0% 50% 50% 0%;
     width: 75%;
     padding: 0% 10%;
-    font-family: 'Circular Std Black';
+    font-family: 'Circular Std';
+    font-weight: 900;
+    font-style: normal;
 }
 
 .hero-subtitle {
@@ -28,7 +93,9 @@
 
 .hero-title {
     font-size: 5vw;
-    font-family: 'Circular Std Bold';
+    font-family: 'Circular Std';
+    font-weight: bold;
+    font-style: normal;
     color: black;
 }
 
