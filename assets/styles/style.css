@@ -42,6 +42,7 @@ html {
 
 .landing-section {
     padding: 0;
+    background-image: url("/assets/pics/Art.jpg")
 }
 
 .notification {
