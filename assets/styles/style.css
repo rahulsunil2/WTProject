@@ -42,7 +42,10 @@ html {
 
 .landing-section {
     padding: 0;
-    background-image: url("../pics/Art.jpg")
+    background-image: url("../pics/Art.jpg");
+    background-repeat: no-repeat;
+    background-attachment: fixed;
+    background-size: cover;
 }
 
 .notification {
